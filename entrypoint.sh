@@ -26,5 +26,5 @@ while [  $COUNTER -lt ${CHECK_ATTEMPTS} ]; do
     else
         echo -n "."
     fi
-    sleep ${BETWEEN_START_DELAY}
+    sleep ${BETWEEN_CHECK_DELAY}
 done
