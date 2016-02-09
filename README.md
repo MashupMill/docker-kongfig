@@ -15,7 +15,7 @@ docker run --rm --link kong:kong \
 | Name | Default Value | Description |
 | ---- | ------------- | ----------- |
 | `BETWEEN_START_DELAY` | 2 | Number of seconds between each check to see if kong is alive |
-| `POST_START_DELAY` | 2 | Number of seconds to wait after we detect its started...seems like it takes a couple seconds after that |
+| `POST_START_DELAY` | 5 | Number of seconds to wait after we detect its started...seems like it takes a couple seconds after that |
 | `CHECK_ATTEMPTS` | 20 | Number of attempts to check to see if kong is live |
 
 
