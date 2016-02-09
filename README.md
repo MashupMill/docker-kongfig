@@ -46,11 +46,11 @@ kong-dashboard:
     - '8002:8080'
 
 kongfig:
-  build: ./kongfig
+  image: mashupmill/kongfig
   links:
     - 'kong:kong'
   volumes:
-    - '.:/config'
-  command: --path /config/kongfig.yml --host kong:8001
+    - './config.yml:/config.yml'
+  command: --path /config.yml --host kong:8001
 
 ```
