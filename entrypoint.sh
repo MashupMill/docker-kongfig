@@ -21,11 +21,10 @@ while [  $COUNTER -lt ${CHECK_ATTEMPTS} ]; do
     if `curl -s $HOST | grep -q 'Welcome to Kong'`; then
         echo "started"
         sleep ${POST_START_DELAY}
+        kongfig "$@"
         break
     else
         echo -n "."
     fi
     sleep ${BETWEEN_START_DELAY}
 done
-
-kongfig "$@"
