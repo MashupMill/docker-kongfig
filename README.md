@@ -16,7 +16,7 @@ docker run --rm --link kong:kong \
 | ---- | ------------- | ----------- |
 | `BETWEEN_CHECK_DELAY` | 2 | Number of seconds between each check to see if kong is alive |
 | `POST_START_DELAY` | 0 | Number of seconds to wait after we detect its started |
-| `CHECK_ATTEMPTS` | 30 | Number of attempts to check to see if kong is live |
+| `CHECK_ATTEMPTS` | 60 | Number of attempts to check to see if kong is live |
 
 
 ## Example `docker-compose.yml`

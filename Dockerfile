@@ -4,7 +4,7 @@ WORKDIR /config
 
 ENV BETWEEN_CHECK_DELAY=2 \
     POST_START_DELAY=0 \
-    CHECK_ATTEMPTS=30
+    CHECK_ATTEMPTS=60
 
 COPY ./entrypoint.sh /usr/local/bin/entrypoint
 
