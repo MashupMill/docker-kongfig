@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SEARCH_TEXT=${SEARCH_TEXT:-kong}
+
 for var in "$@"
 do
     if [ "$IS_HOST" == "true" ]; then
@@ -18,7 +20,7 @@ echo -n "waiting for $HOST to start up..."
 trap 'exit' INT
 while [  $COUNTER -lt ${CHECK_ATTEMPTS} ]; do
     let COUNTER=COUNTER+1
-    if `curl -s $HOST | grep -q 'Welcome to Kong'`; then
+    if `curl -s $HOST | grep -q -i "$SEARCH_TEXT"`; then
         echo "started"
         sleep ${POST_START_DELAY}
         kongfig "$@"
