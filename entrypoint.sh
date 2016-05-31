@@ -2,7 +2,7 @@
 
 SEARCH_TEXT=${SEARCH_TEXT:-kong}
 
-ARGUMENTS=$@
+ARGUMENTS=( "$@" )
 while :
 do
     case "$1" in
@@ -41,7 +41,7 @@ while [  $COUNTER -lt ${CHECK_ATTEMPTS} ]; do
     if `curl -s $HOST | grep -q -i "$SEARCH_TEXT"`; then
         echo "started"
         sleep ${POST_START_DELAY}
-        kongfig "$ARGUMENTS"
+        kongfig "${ARGUMENTS[@]}"
         break
     else
         echo -n "."
