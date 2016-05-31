@@ -6,10 +6,6 @@ ARGUMENTS=( "$@" )
 while :
 do
     case "$1" in
-        --debug )
-            DEBUG=true
-            shift
-            ;;
         --path )
             CONFIG_FILE=$2
             shift 2
