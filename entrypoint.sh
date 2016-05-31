@@ -2,7 +2,7 @@
 
 SEARCH_TEXT=${SEARCH_TEXT:-kong}
 
-ARGUMENTS="$@"
+ARGUMENTS=$@
 while :
 do
     case "$1" in
