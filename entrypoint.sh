@@ -38,7 +38,7 @@ while [  $COUNTER -lt ${CHECK_ATTEMPTS} ]; do
         echo "started"
         sleep ${POST_START_DELAY}
         kongfig "${ARGUMENTS[@]}"
-        break
+        exit $?
     else
         echo -n "."
     fi
