@@ -37,8 +37,8 @@ kong:
     - '8000:8000' # http proxy port
     - '8443:8443' # https proxy port
     - '8001:8001' # http admin port
-    - '7946:7946' # idk...their docs say to do it
-    - '7946:7946/udp' # idk...their docs say to do it
+    - '7946:7946' # clustering
+    - '7946:7946/udp' # clustering
 
 kong-dashboard:
   image: pgbi/kong-dashboard
