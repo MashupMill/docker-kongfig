@@ -6,7 +6,7 @@ ENV BETWEEN_CHECK_DELAY=2     POST_START_DELAY=0     CHECK_ATTEMPTS=60     CONFI
 
 COPY ./entrypoint.sh /usr/local/bin/entrypoint
 
-RUN npm install kongfig@1.2.17 -g ; chmod a+x /usr/local/bin/entrypoint
+RUN npm install kongfig@1.2.18 -g ; chmod a+x /usr/local/bin/entrypoint
 
 ENTRYPOINT ["entrypoint"]
 
